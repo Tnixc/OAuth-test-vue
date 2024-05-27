@@ -1,8 +1,10 @@
 <template>
+  <body class="dark">
     <main class="p-4">
-        <SignIn v-if="!user" />
-        <Dashboard v-if="user" />
+      <SignIn v-if="!user" />
+      <Dashboard v-if="user" />
     </main>
+  </body>
 </template>
 
 <script setup lang="ts">

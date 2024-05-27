@@ -28,11 +28,11 @@ Let Supabase handle token parsing and management. It's designed to take care of 
 4. **Client ID & Secret**: Back in Supabase, populate the fields for the Client ID and Client Secret which you'll get from your provider.
 5. **Site URL**: Make sure to point the callback URL in Supabase to your main site. For local development, `http://127.0.0.1:5173/` will do.
 6. **App.vue Setup**: Open `App.vue` and locate the `signIn` method. Replace the `provider` field with your chosen provider.
-**Extra**: If you need to redirect the user to a specific URL post-authentication, use the `redirectTo` parameter inside the `signInWithOAuth` object.
+   **Extra**: If you need to redirect the user to a specific URL post-authentication, use the `redirectTo` parameter inside the `signInWithOAuth` object.
 
 ```js
 const { user, session, error } = await supabase.auth.signInWithOAuth({
-  provider: 'github',  // Or whatever provider you chose
-  redirectTo: 'https://example.com/'  // Optional
+  provider: "github", // Or whatever provider you chose
+  redirectTo: "https://example.com/", // Optional
 });
 ```
